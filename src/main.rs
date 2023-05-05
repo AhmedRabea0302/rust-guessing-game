@@ -16,6 +16,10 @@ fn main() {
         .read_line(&mut guess)
         .expect("Failed to read line!");
 
+    // Convert the guess number to integer
+    let guess: u32 = guess.trim().parse()
+                            .expect("Please Enter A number!");
+
     println!("You Guessed the Number: {guess}");
 
     // Comart The guessed number with the secret number
